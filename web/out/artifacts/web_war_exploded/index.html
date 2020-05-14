@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>考研高校查询_高校推荐系统</title>
+    <link rel="stylesheet" media="screen" href='styles/basic.css'/>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/mllbInit.js"></script>
+    <script src="scripts/zymcChange.js"></script>
+    <script src="scripts/formSubmit.js"></script>
+</head>
+<body>
+<div class="header-wrapper">
+    <div class="header-second ">
+        <h1>考研高校推荐系统</h1>
+        <div class="header-quotes">
+            致力于解决择校难问题！
+        </div>
+    </div>
+</div>
+<!--上边是头部目录-->
+<!--接下来直接填写表单-->
+<div class="container">
+    <div class="row">
+        <div class="form-box">
+            <h2>填写表单</h2>
+            <div class="form-summary">
+                专业名称为必选项，其他至少填写一项
+            </div>
+            <div class="form">
+                <form name="form1" method="post" id="form1">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <colgroup>
+                            <col width="120">
+                            <col width="260">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td align="right">
+                                <label>所在省市</label>
+                            </td>
+                            <td align="left">
+                                <select name="szss" id="szss" class="select">
+                                    <option value>--选择省市--</option>
+                                    <option value="11">(11)北京市</option>
+                                    <option value="12">(12)天津市</option>
+                                    <option value="13">(13)河北省</option>
+                                    <option value="14">(14)山西省</option>
+                                    <option value="15">(15)内蒙古自治区</option>
+                                    <option value="21">(21)辽宁省</option>
+                                    <option value="22">(22)吉林省</option>
+                                    <option value="23">(23)黑龙江省</option>
+                                    <option value="31">(31)上海市</option>
+                                    <option value="32">(32)江苏省</option>
+                                    <option value="33">(33)浙江省</option>
+                                    <option value="34">(34)安徽省</option>
+                                    <option value="35">(35)福建省</option>
+                                    <option value="36">(36)江西省</option>
+                                    <option value="37">(37)山东省</option>
+                                    <option value="41">(41)河南省</option>
+                                    <option value="42">(42)湖北省</option>
+                                    <option value="43">(43)湖南省</option>
+                                    <option value="44">(44)广东省</option>
+                                    <option value="45">(45)广西壮族自治区</option>
+                                    <option value="46">(46)海南省</option>
+                                    <option value="50">(50)重庆市</option>
+                                    <option value="51">(51)四川省</option>
+                                    <option value="52">(52)贵州省</option>
+                                    <option value="53">(53)云南省</option>
+                                    <option value="54">(54)西藏自治区</option>
+                                    <option value="61">(61)陕西省</option>
+                                    <option value="62">(62)甘肃省</option>
+                                    <option value="63">(63)青海省</option>
+                                    <option value="64">(64)宁夏回族自治区</option>
+                                    <option value="65">(65)新疆维吾尔自治区</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <label>门类类别</label>
+                            </td>
+                            <td align="left">
+                                <select name="mllb" id="mllb" class="select" onchange="initZymc();">
+                                    <option value>--选择门类--</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <label>专业名称</label>
+                            </td>
+                            <td align="left">
+                                <select name="zymc" id="zymc" class="select">
+                                    <option value>--选择专业--</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text_enter" colspan="4">
+                                <input type="button" name="button" id="button_submint" class="btn"
+                                       onclick="formSubmit();" value="查询">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <!-- 表单 end-->
+        </div>
+        <div class="placeholder">
+            <!--这里是查询结果展示区域-->
+        </div>
+    </div>
+</div>
+</body>
+</html>
